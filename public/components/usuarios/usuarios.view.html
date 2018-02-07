@@ -1,6 +1,3 @@
-<h1>
-  Hola soy la vista de usuarios
-</h1>
 
 <div class="col-md-4">
 
@@ -38,10 +35,10 @@
 
     <div class="form-group">
       <label for="txtEmail">Correo electrónico</label>
-      <input type="text" class="form-control" id="txtEmail" aria-describedby="campoEmailRequerido" ng-model="vm.nuevoUsuario.correo" required>
+      <input type="email" class="form-control" id="txtEmail" aria-describedby="campoEmailRequerido" ng-model="vm.nuevoUsuario.correo" required>
       <small id="campoEmailRequerido" class="form-text text-muted">Este campo es requerido</small>
     </div>
 
-    <button type="submit" class="btn btn-primary" ng-disabled="formRegustroUsuarios.$invalid">Registrar</button>
+    <button type="submit" class="btn btn-primary" ng-disabled="formRegustroUsuarios.$invalid ||formRegustroUsuarios.$error">Registrar</button>
   </form>
 </div>
